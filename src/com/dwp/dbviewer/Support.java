@@ -18,12 +18,14 @@ import java.util.Properties;
 public class Support {
     private static Properties prop = new Properties();
 
+    //Reads the config file
     private static Properties readConfigFile() throws IOException {
         FileInputStream fis = new FileInputStream("Config.properties");
         prop.load(fis);
         return prop;
     }
 
+    //Gets values of keys in the config file
     static String getConfigData(String data) throws IOException {
         prop = readConfigFile();
         data = prop.getProperty(data);

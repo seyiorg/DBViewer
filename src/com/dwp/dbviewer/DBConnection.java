@@ -21,6 +21,7 @@ public class DBConnection {
     private String db_password = "db_password"; 
 
     
+    //Returns an active connection to the DB server
         public Connection dBConnectivitiy() throws SQLException {
             
             try {
